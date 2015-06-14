@@ -36,6 +36,8 @@ public class FollowCam : MonoBehaviour {
 				if (poi.rigidbody.IsSleeping()) {
 					// return to default view
 					poi = null;
+					Destroy(poi);
+					MissionDemolition.SwitchView("Both");
 					// in the next update
 					return;
 				}
